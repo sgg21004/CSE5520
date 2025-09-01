@@ -50,4 +50,4 @@ def update_chart(n_terms):
     return create_fib_figure(n_terms)
 
 if __name__ == '__main__':
-    app.run(debug=True)  # ✅ updated from run_server → run
+    app.run(debug=True)  
