@@ -1,6 +1,5 @@
 import pygal
 
-# Correct Fibonacci sequence generator
 def fibonacci_sequence(n):
     sequence = []
     n1, n2 = 0, 1
@@ -8,8 +7,7 @@ def fibonacci_sequence(n):
         sequence.append(n1)
         n1, n2 = n2, n1 + n2
     return sequence
-
-# Generates and returns a pygal Bar chart object
+    
 def generate_plot_items(num):
     fib_items = fibonacci_sequence(num)
 
@@ -20,7 +18,6 @@ def generate_plot_items(num):
 
     return bar_chart
 
-# Main code: generate and save two plots
 if __name__ == "__main__":
     generate_plot_items(10).render_to_file('fibonacci_10_terms.svg')
     generate_plot_items(50).render_to_file('fibonacci_50_terms.svg')
