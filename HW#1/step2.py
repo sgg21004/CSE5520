@@ -1,6 +1,5 @@
 import plotly.graph_objects as go
 
-# Same correct Fibonacci logic
 def fibonacci_sequence(n):
     sequence = []
     n1, n2 = 0, 1
@@ -9,7 +8,6 @@ def fibonacci_sequence(n):
         n1, n2 = n2, n1 + n2
     return sequence
 
-# Generate and save a bar chart using Plotly
 def generate_plotly_chart(num_terms):
     sequence = fibonacci_sequence(num_terms)
     x_labels = list(range(1, num_terms + 1))
@@ -28,7 +26,6 @@ def generate_plotly_chart(num_terms):
     fig.write_html(filename)
     print(f"HTML file saved: {filename}")
 
-# Main
 if __name__ == "__main__":
     generate_plotly_chart(10)
     generate_plotly_chart(50)
